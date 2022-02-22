@@ -5,18 +5,16 @@ const customerSchema = new mongoose.Schema({
         type:String,
         required: [true, "Business name is required"],
     }, 
-    logo: {
-        type: String,
-    },
-    socialMedia : {
+    logo: String,
+    socialMedia : new mongoose.Schema({
         facebook:String,
         instagram:String,
         twitter:String
-    },
-    content:{
+    }),
+    content:new mongoose.Schema({
         aboutCompany:String,
         locationCompany:String
-    },
+    }),
     relatedDocs:{
         type:String
     },

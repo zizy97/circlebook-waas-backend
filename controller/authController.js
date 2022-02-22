@@ -119,9 +119,14 @@ const createUser = (fname, lname, email, pNumber, gender, password, nic, role) =
 };
 
 //Customer Creation Function
-const createCustomer = (city, users_id) => {
+const createCustomer = (bName, logo, socialMedia, content, relatedDocs, remarks, users_id) => {
   let customer = new Customer({
-    city,
+    bName, 
+    logo, 
+    socialMedia, 
+    content, 
+    relatedDocs, 
+    remarks,
     users_id,
   });
   return customer.save();
